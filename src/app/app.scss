@@ -1,0 +1,6 @@
+@use '../variables.scss' as *;
+
+.header {
+  background: $background;
+  border-bottom: 1px solid $border-color;
+}

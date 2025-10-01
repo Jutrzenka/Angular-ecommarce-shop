@@ -1,0 +1,44 @@
+// colors
+$primary-color: #2e8c8c;
+$secondary-color: #30bfb1;
+$accent-color: #f2ae30;
+$warning-color: #d98b2b;
+$muted-color: #82728c;
+
+$text-primary: #222222;
+$text-secondary: #555555;
+$background: #ffffff;
+$border-color: #e0e0e0;
+
+// breakpoints
+$breakpoint-md: 768px;
+
+// other
+$font-stack: 'Roboto', sans-serif;
+$border-radius: 0.375rem;
+$transition: all 0.3s ease;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin for-desktop {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin hover-effect {
+  transition: $transition;
+  &:hover {
+    background-color: $gray-100;
+  }
+}
+
+@mixin focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  ring: 2px solid $gray-200;
+}

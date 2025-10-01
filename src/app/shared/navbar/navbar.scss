@@ -1,0 +1,94 @@
+@use '../../../variables.scss' as *;
+
+.nav {
+  * {
+    font-size: medium;
+    font-weight: 800;
+    font-family: $font-stack;
+  }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+
+  // Logo
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 20px;
+      width: auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  &__link {
+    color: $text-primary;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $accent-color;
+      background: transparent;
+    }
+
+    &--active {
+      color: $primary-color;
+      background: transparent;
+    }
+  }
+
+  // Cart
+  &__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: $text-primary;
+
+    &:hover {
+      background: $accent-color;
+      color: $background;
+    }
+
+    .cart-icon {
+      height: 20px;
+      width: auto;
+    }
+  }
+}
+
+.nav-bottom-bar {
+  height: 1px;
+  background: linear-gradient(90deg, $primary-color, $secondary-color, $accent-color);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 1rem;
+
+    &__links {
+      gap: 1.5rem;
+    }
+
+    &__link {
+      font-size: 0.85rem;
+    }
+  }
+}

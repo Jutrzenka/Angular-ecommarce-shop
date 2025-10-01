@@ -1,0 +1,28 @@
+<nav class="nav">
+  <!-- Logo -->
+  <a routerLink="/" class="nav__logo">
+    <img src="/logoipsum-385.svg" alt="Logo" class="logo" />
+  </a>
+
+  <!-- Menu links -->
+  <div class="nav__links">
+    <a
+      routerLink="/"
+      class="nav__link"
+      routerLinkActive="nav__link--active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a routerLink="/products" class="nav__link" routerLinkActive="nav__link--active">Products</a>
+    <a routerLink="/gift-cards" class="nav__link" routerLinkActive="nav__link--active"
+      >Gift Cards</a
+    >
+  </div>
+
+  <!-- Cart -->
+  <a routerLink="/cart" class="nav__cart">
+    <img src="/cart.svg" alt="Cart" class="cart-icon" />
+  </a>
+</nav>
+<!-- Szara belka pod navbarem -->
+<div class="nav-bottom-bar"></div>
