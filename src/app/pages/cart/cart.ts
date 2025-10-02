@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-cart',
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './cart.html',
-  styleUrl: './cart.scss'
+  styleUrl: './cart.scss',
 })
-export class Cart {
-
-}
+export class Cart {}
