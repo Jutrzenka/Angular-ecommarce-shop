@@ -1,1 +1,47 @@
-<app-footer />
+<main class="cart">
+  <section class="cart__container">
+    <h2 class="cart__title">Shopping Cart</h2>
+
+    <div class="cart__layout">
+      <div class="cart__products">
+        @if (cartProducts.length === 0) {
+        <div class="cart__empty">
+          <img src="/img/empty-cart.png" alt="Empty Cart" class="cart__empty-img" />
+          <h2>Your cart is empty</h2>
+          <p>
+            Looks like you haven't added any products yet...
+            <a routerLink="/" class="cart__continue">Continue Shopping →</a>
+          </p>
+        </div>
+        } @else { @for (cartProduct of cartProducts; track $index) {
+        <app-cart-product [cartProduct]="cartProduct" (updateCartEvent)="updateCart()" />
+        } }
+      </div>
+
+      <div class="cart__summary">
+        <div class="cart__summary-box">
+          <p class="cart__summary-title">Order summary</p>
+          <dl class="cart__summary-row">
+            <dt>Total</dt>
+            <dd>{{ total | currency }}</dd>
+          </dl>
+          <button class="cart__checkout">Proceed to Checkout</button>
+          <div class="cart__alt">
+            <span>or</span>
+            <a routerLink="/" class="cart__continue">Continue Shopping →</a>
+          </div>
+        </div>
+
+        <div class="cart__voucher">
+          <form>
+            <label for="voucher">Do you have a voucher or gift card?</label>
+            <input id="voucher" type="text" placeholder="Enter code" />
+            <button type="submit">Apply Code</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-footer />
+</main>
