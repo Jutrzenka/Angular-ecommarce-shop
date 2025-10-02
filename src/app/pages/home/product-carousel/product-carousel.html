@@ -10,6 +10,7 @@
           <app-product-offer
             class="product-offer--carousel"
             [product]="product"
+            (seeMore)="app.openModal($event)"
           ></app-product-offer>
         </div>
         }

@@ -2,6 +2,7 @@ import { Component, input, OnInit, OnDestroy } from '@angular/core';
 import { Product } from '../../../models/product.model';
 import { ProductOfferComponent } from '../../../shared/product-offer/product-offer';
 import { CarouselButtonComponent } from '../../../shared/carousel-button/carousel-button';
+import { App } from '../../../app';
 
 @Component({
   selector: 'app-product-carousel',
@@ -10,6 +11,7 @@ import { CarouselButtonComponent } from '../../../shared/carousel-button/carouse
   imports: [ProductOfferComponent, CarouselButtonComponent],
 })
 export class ProductCarouselComponent {
+  constructor(public app: App) {}
   products = input.required<Product[]>();
   currentIndex = 0;
 

@@ -13,11 +13,6 @@
 
     <div class="product-offer__price">${{ product().price }}</div>
 
-    <button class="product-offer__button" (click)="openModal()">See More →</button>
+    <button class="product-offer__button" (click)="seeMore.emit(product())">See More →</button>
   </div>
 </div>
-<app-product-modal
-  [product]="product()"
-  [visible]="isModalOpen()"
-  (close)="closeModal()"
-></app-product-modal>

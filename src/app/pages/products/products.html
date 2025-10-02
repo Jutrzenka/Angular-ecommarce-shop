@@ -3,7 +3,7 @@
 
   <div class="products__grid">
     @for (product of products$ | async; track product.id) {
-    <app-product-offer [product]="product"></app-product-offer>
+    <app-product-offer [product]="product" (seeMore)="app.openModal($event)"></app-product-offer>
     }
   </div>
 </section>

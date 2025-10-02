@@ -2,3 +2,8 @@
   <app-navbar />
 </header>
 <router-outlet />
+<app-product-modal
+  [product]="selectedProduct()"
+  [visible]="isModalOpen()"
+  (close)="closeModal()"
+></app-product-modal>
