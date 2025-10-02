@@ -1,5 +1,10 @@
-<main>
-  <section>
-    <app-home-banner />
+<main class="home">
+  <section class="home__content-section">
+    <div class="home__content-wrapper">
+      <app-home-banner class="home__banner"></app-home-banner>
+      <div class="home__carousel-wrapper">
+        <app-product-carousel [products]="(productOffers$ | async) ?? []"></app-product-carousel>
+      </div>
+    </div>
   </section>
 </main>

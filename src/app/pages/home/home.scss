@@ -1,12 +1,44 @@
-section {
-  display: grid;
-  place-content: center;
-  gap: 0.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
+@use '../../../variables.scss' as *;
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 6.5rem;
+.home {
+  &__content-wrapper {
+    max-width: 1400px;
+    margin: 4rem auto;
+    display: grid;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__carousel-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__products-title {
+    text-align: center;
+    font-weight: 700;
+    color: $text-primary;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

@@ -1,0 +1,52 @@
+@use '../../../variables.scss' as *;
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba($accent-color, 0.9);
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $text-secondary;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 20;
+
+  // UNIWERSALNE rozmiary SVG
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: $warning-color;
+    transform: translateY(-50%) scale(1.1);
+    color: $text-secondary;
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &--prev {
+    left: 0.5rem;
+
+    @media (min-width: 768px) {
+      left: 1rem;
+    }
+  }
+
+  &--next {
+    right: 0.5rem;
+
+    @media (min-width: 768px) {
+      right: 1rem;
+    }
+  }
+}

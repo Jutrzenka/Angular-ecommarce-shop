@@ -1,0 +1,18 @@
+<div class="product-offer">
+  <div class="product-offer__image">
+    <img [src]="product().image" [alt]="product().title" />
+  </div>
+
+  <div class="product-offer__content">
+    <h3 class="product-offer__title">{{ product().title }}</h3>
+    <p class="product-offer__category">{{ product().category }}</p>
+
+    <div class="product-offer__rating">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+
+    <div class="product-offer__price">${{ product().price }}</div>
+
+    <button class="product-offer__button">See More →</button>
+  </div>
+</div>

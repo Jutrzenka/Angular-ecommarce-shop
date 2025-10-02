@@ -1,0 +1,31 @@
+<section class="product-carousel">
+  <div class="product-carousel__container">
+    <div class="product-carousel__track-wrapper">
+      <div
+        class="product-carousel__track"
+        [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+      >
+        @for (product of products(); track product.id; let i = $index) {
+        <div class="product-carousel__slide">
+          <app-product-offer [product]="product"></app-product-offer>
+        </div>
+        }
+      </div>
+    </div>
+
+    <app-carousel-button direction="prev" (navigate)="previous()"></app-carousel-button>
+
+    <app-carousel-button direction="next" (navigate)="next()"></app-carousel-button>
+
+    <div class="product-carousel__indicators">
+      @for (product of products(); track product.id; let i = $index) {
+      <button
+        class="product-carousel__indicator"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Go to slide ' + (i + 1)"
+      ></button>
+      }
+    </div>
+  </div>
+</section>

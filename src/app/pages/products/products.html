@@ -1,1 +1,8 @@
-<p>products works!</p>
+<section class="home__products-section">
+  <h2 class="home__products-title">Pick Your Favorite Product</h2>
+  <div class="home__products-grid">
+    @for (product of products$ | async; track product.id) {
+    <app-product-offer [product]="product"></app-product-offer>
+    }
+  </div>
+</section>
