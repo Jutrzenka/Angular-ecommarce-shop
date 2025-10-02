@@ -1,0 +1,49 @@
+@use '../../../variables.scss' as *;
+
+.footer {
+  background: $background;
+  padding: 2rem 1rem;
+  border-top: 1px solid $border-color;
+  font-family: $font-stack;
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  &__tagline {
+    color: $text-secondary;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  &__copy {
+    display: block;
+    font-size: 0.85rem;
+    color: $text-secondary;
+
+    .footer__link {
+      color: $primary-color;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $accent-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

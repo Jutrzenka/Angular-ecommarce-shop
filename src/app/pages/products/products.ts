@@ -4,10 +4,11 @@ import { map, Observable } from 'rxjs';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product';
 import { AsyncPipe } from '@angular/common';
+import { FooterComponent } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-products',
-  imports: [ProductOfferComponent, AsyncPipe],
+  imports: [ProductOfferComponent, AsyncPipe, FooterComponent],
   templateUrl: './products.html',
   styleUrl: './products.scss',
 })

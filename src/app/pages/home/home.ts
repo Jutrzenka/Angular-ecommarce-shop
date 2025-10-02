@@ -5,6 +5,7 @@ import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product';
 import { HomeBannerComponent } from '../../pages/home/home-banner/home-banner';
 import { ProductCarouselComponent } from '../../pages/home/product-carousel/product-carousel';
+import { FooterComponent } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-home',
