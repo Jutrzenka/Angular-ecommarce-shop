@@ -17,11 +17,15 @@
   transition: transform 0.3s ease, background 0.3s ease;
   z-index: 20;
 
-  // UNIWERSALNE rozmiary SVG
-  svg {
+  svg,
+  .carousel-button__icon {
     width: 1.25rem;
     height: 1.25rem;
     flex-shrink: 0;
+  }
+
+  &--next .carousel-button__icon {
+    transform: rotate(180deg);
   }
 
   &:hover {
@@ -36,17 +40,9 @@
 
   &--prev {
     left: 0.5rem;
-
-    @media (min-width: 768px) {
-      left: 1rem;
-    }
   }
 
   &--next {
     right: 0.5rem;
-
-    @media (min-width: 768px) {
-      right: 1rem;
-    }
   }
 }

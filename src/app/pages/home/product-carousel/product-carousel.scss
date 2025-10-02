@@ -38,7 +38,7 @@
     height: 0.5rem;
     border-radius: 50%;
     border: none;
-    background: #e5e7eb;
+    background: $text-secondary;
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -48,8 +48,8 @@
     }
 
     &:hover {
-      background: $primary-color;
-      transform: scale(1.2);
+      background: $accent-color;
+      transform: scale(1.3);
     }
   }
 }
