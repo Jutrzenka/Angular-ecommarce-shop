@@ -1,7 +1,7 @@
 import { Component, input, OnInit, OnDestroy } from '@angular/core';
 import { Product } from '../../../models/product.model';
-import { ProductOfferComponent } from '../product-offer/product-offer';
-import { CarouselButtonComponent } from "../../../shared/carousel-button/carousel-button";
+import { ProductOfferComponent } from '../../../shared/product-offer/product-offer';
+import { CarouselButtonComponent } from '../../../shared/carousel-button/carousel-button';
 
 @Component({
   selector: 'app-product-carousel',

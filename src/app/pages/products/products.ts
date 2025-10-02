@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductOfferComponent } from '../../pages/home/product-offer/product-offer';
+import { ProductOfferComponent } from '../../shared/product-offer/product-offer';
 import { map, Observable } from 'rxjs';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product';
