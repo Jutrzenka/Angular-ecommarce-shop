@@ -1,7 +1,7 @@
 # Angular E-Commerce Shop
 
 ## Opis projektu  
-Angular E-Commerce Shop to aplikacja frontendowa zbudowana przy użyciu Angulara, mająca służyć jako sklep internetowy. Celem tego projektu jest umożliwienie przeglądania produktów, zarządzania koszykiem oraz integracji z backendem (API). Projekt ma pełnić rolę przykładowej aplikacji pokazującej wzorce i dobre praktyki w tworzeniu sklepu w Angularze.
+Angular E-Commerce Shop to aplikacja frontendowa zbudowana przy użyciu Angulara, mająca służyć jako makieta sklepu internetowego. Celem tego projektu jest umożliwienie przeglądania produktów, zarządzania koszykiem oraz integracji z backendem (API). Projekt ma pełnić rolę przykładowej aplikacji pokazującej wzorce i dobre praktyki w tworzeniu sklepu w Angularze.
 
 ## Wersja DEMO:
 DEMO: https://angular-ecommarce-shop-84jb7a408-kacper-czajas-projects.vercel.app/
