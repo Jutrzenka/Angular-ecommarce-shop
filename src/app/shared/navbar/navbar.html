@@ -22,6 +22,10 @@
   <!-- Cart -->
   <a routerLink="/cart" class="nav__cart">
     <img src="/cart.svg" alt="Cart" class="cart-icon" />
+
+    @if (cartCount$ | async; as count) {
+    <span class="cart-badge">{{ count }}</span>
+    }
   </a>
 </nav>
 <!-- Szara belka pod navbarem -->
