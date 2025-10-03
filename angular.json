@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular-ecommarce-shop": {
+    "Angular-ecommerce-shop": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
