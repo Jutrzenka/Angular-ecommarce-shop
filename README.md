@@ -1,6 +1,7 @@
 # Angular E-Commerce Shop
 
-## Wersja DEMO: https://angular-ecommarce-shop-84jb7a408-kacper-czajas-projects.vercel.app/
+## Wersja DEMO:
+https://angular-ecommarce-shop-84jb7a408-kacper-czajas-projects.vercel.app/
 
 ## Screenshots:
 <img width="1436" height="900" alt="obraz" src="https://github.com/user-attachments/assets/73547a1f-3f3e-44e3-bcb5-9c5a6f0b57f5" />
