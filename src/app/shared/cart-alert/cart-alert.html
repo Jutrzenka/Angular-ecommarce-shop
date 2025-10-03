@@ -1,0 +1,15 @@
+<div
+  class="alert"
+  [class.alert--visible]="visible"
+  [class.alert--success]="type === 'success'"
+  [class.alert--error]="type === 'error'"
+  [class.alert--info]="type === 'info'"
+>
+  <div class="alert__content">
+    <span class="alert__icon" aria-hidden="true">
+      @switch (type) { @case ('success') { ✔ } @case ('error') { ✖ } @default { i } }
+    </span>
+    <p class="alert__message">{{ message }}</p>
+    <button class="alert__close" (click)="close()" aria-label="Close">x</button>
+  </div>
+</div>
