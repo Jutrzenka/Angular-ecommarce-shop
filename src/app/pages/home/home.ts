@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { map, Observable } from 'rxjs';
 import { Product } from '../../models/product.model';
-import { ProductService } from '../../services/product';
+import { ProductService } from '../../services/product.service';
 import { HomeBannerComponent } from '../../pages/home/home-banner/home-banner';
 import { ProductCarouselComponent } from '../../pages/home/product-carousel/product-carousel';
 import { FooterComponent } from '../../shared/footer/footer';

@@ -4,7 +4,7 @@
 
     <div class="cart__layout">
       <div class="cart__products">
-        @if (cartProducts.length === 0) {
+        @if ((cartProducts$ | async)?.length === 0) {
         <div class="cart__empty">
           <img src="/img/empty-cart.png" alt="Empty Cart" class="cart__empty-img" />
           <h2>Your cart is empty</h2>
@@ -13,8 +13,12 @@
             <a routerLink="/" class="cart__continue">Continue Shopping →</a>
           </p>
         </div>
-        } @else { @for (cartProduct of cartProducts; track $index) {
-        <app-cart-product [cartProduct]="cartProduct" (updateCartEvent)="updateCart()" />
+        } @else { @for (cartProduct of (cartProducts$ | async); track $index) {
+        <app-cart-product
+          [cartProduct]="cartProduct"
+          (remove)="remove(cartProduct.product.id)"
+          (quantityChange)="updateQuantity(cartProduct.product.id, $event)"
+        />
         } }
       </div>
 
@@ -23,7 +27,7 @@
           <p class="cart__summary-title">Order summary</p>
           <dl class="cart__summary-row">
             <dt>Total</dt>
-            <dd>{{ total | currency }}</dd>
+            <dd>{{ total$ | async | currency }}</dd>
           </dl>
           <button class="cart__checkout">Proceed to Checkout</button>
           <div class="cart__alt">

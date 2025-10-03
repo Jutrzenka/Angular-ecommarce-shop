@@ -11,10 +11,10 @@
     </p>
 
     <div class="cart-product__actions">
-      <button (click)="decreaseQuantity()">-</button>
+      <button (click)="decrease()">-</button>
       <span>{{ cartProduct().quantity }}</span>
-      <button (click)="increaseQuantity()">+</button>
-      <button class="cart-product__remove" (click)="remove()">Remove</button>
+      <button (click)="increase()">+</button>
+      <button class="cart-product__remove" (click)="removeItem()">Remove</button>
     </div>
   </div>
 </div>

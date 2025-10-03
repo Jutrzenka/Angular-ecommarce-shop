@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { CartProduct } from '../../../models/cart-product.model';
+import { CartItem } from '../../../services/cart.service';
 import { CurrencyPipe } from '@angular/common';
 
 @Component({
@@ -10,37 +10,19 @@ import { CurrencyPipe } from '@angular/common';
   imports: [CurrencyPipe],
 })
 export class CartProductComponent {
-  cartProduct = input.required<CartProduct>();
-  updateCartEvent = output<void>();
+  cartProduct = input.required<CartItem>();
+  remove = output<number>();
+  quantityChange = output<number>();
 
-  increaseQuantity() {
-    this.cartProduct().quantity++;
-    this.save();
+  increase() {
+    this.quantityChange.emit(this.cartProduct().quantity + 1);
   }
 
-  decreaseQuantity() {
-    if (this.cartProduct().quantity > 1) {
-      this.cartProduct().quantity--;
-      this.save();
-    }
+  decrease() {
+    this.quantityChange.emit(this.cartProduct().quantity - 1);
   }
 
-  remove() {
-    const products: CartProduct[] =
-      JSON.parse(localStorage.getItem('cart-products') as string) || [];
-    const updated = products.filter((p) => p.product.id !== this.cartProduct().product.id);
-    localStorage.setItem('cart-products', JSON.stringify(updated));
-    this.updateCartEvent.emit();
-  }
-
-  private save() {
-    const products: CartProduct[] =
-      JSON.parse(localStorage.getItem('cart-products') as string) || [];
-    const idx = products.findIndex((p) => p.product.id === this.cartProduct().product.id);
-    if (idx !== -1) {
-      products[idx].quantity = this.cartProduct().quantity;
-    }
-    localStorage.setItem('cart-products', JSON.stringify(products));
-    this.updateCartEvent.emit();
+  removeItem() {
+    this.remove.emit(this.cartProduct().product.id);
   }
 }
