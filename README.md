@@ -1,59 +1,34 @@
-# AngularEcommarceShop
+# Angular E-Commerce Shop
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+## Opis projektu  
+Angular E-Commerce Shop to aplikacja frontendowa zbudowana przy użyciu Angulara, mająca służyć jako sklep internetowy. Celem tego projektu jest umożliwienie przeglądania produktów, zarządzania koszykiem oraz integracji z backendem (API). Projekt ma pełnić rolę przykładowej aplikacji pokazującej wzorce i dobre praktyki w tworzeniu sklepu w Angularze.
 
-## Development server
+## Funkcjonalności  
+- Przeglądanie katalogu produktów (lista produktów)  
+- Wyświetlanie szczegółów pojedynczego produktu  
+- Dodawanie produktów do koszyka  
+- Zarządzanie zawartością koszyka (zmiana ilości, usuwanie pozycji)  
+- Obsługa stanów ładowania (loading), błędów przy komunikacji z API  
+- Responsywność interfejsu na urządzeniach mobilnych i desktopowych
 
-To start a local development server, run:
+## Technologie i podejścia  
+- Angular (TypeScript, HTML, SCSS)  
+- Angular CLI jako narzędzie do generowania i zarządzania projektem  
+- Modularna struktura aplikacji
+- Komponenty, serwisy (logika, komunikacja z API), interfejsy i modele typów  
+- Routing Angulara
+- HTTPClient do wysyłania żądań REST
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Instrukcja uruchomienia  
+1. Sklonuj repozytorium:  
+   ```bash
+   git clone https://github.com/Jutrzenka/Angular-ecommarce-shop.git
+   cd Angular-ecommarce-shop
+   npm install
+   ng serve
+   ```
+   Opcjonalnie zbuduj wersję produkcyjną:
+   ```bash
+   ng build --configuration production
+   ```
+   
